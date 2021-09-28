@@ -1,7 +1,5 @@
 #pragma once
 #include<iostream>
-#include<string.h>
-#include <string>
 namespace Project2 {
 
 	using namespace System;
@@ -468,13 +466,13 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		else
 			label14->Visible = false;
-		float inputR12 = System::Convert::ToDouble(R12);
-		float inputR23 = System::Convert::ToDouble(R23);
-		float inputR31 = System::Convert::ToDouble(R31);
+		double inputR12 = System::Convert::ToDouble(R12);
+		double inputR23 = System::Convert::ToDouble(R23);
+		double inputR31 = System::Convert::ToDouble(R31);
 
-		float R1 = (inputR12 * inputR31 * 1.0) / (inputR12 + inputR23 + inputR31);
-		float R2 = (inputR12 * inputR23 * 1.0) / (inputR12 + inputR23 + inputR31);
-		float R3 = (inputR23 * inputR31 * 1.0) / (inputR12 + inputR23 + inputR31);
+		double R1 = (inputR12 * inputR31 * 1.0) / (inputR12 + inputR23 + inputR31);
+		double R2 = (inputR12 * inputR23 * 1.0) / (inputR12 + inputR23 + inputR31);
+		double R3 = (inputR23 * inputR31 * 1.0) / (inputR12 + inputR23 + inputR31);
 
 		R12 = System::Convert::ToString("R1=" + R1 + " ohm");
 		R23 = System::Convert::ToString("R2=" + R2 + " ohm");
@@ -504,12 +502,12 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		else
 			label14->Visible = false;
-		float inputR1 = System::Convert::ToDouble(R1);
-		float inputR2 = System::Convert::ToDouble(R2);
-		float inputR3 = System::Convert::ToDouble(R3);
-		float R12 = inputR1 + inputR2 + (inputR1 * inputR2 * 1.0 / inputR3);
-		float R23 = inputR2 + inputR3 + (inputR2 * inputR3 * 1.0 / inputR1);
-		float R31 = inputR3 + inputR1 + (inputR3 * inputR1 * 1.0 / inputR2);
+		double inputR1 = System::Convert::ToDouble(R1);
+		double inputR2 = System::Convert::ToDouble(R2);
+		double inputR3 = System::Convert::ToDouble(R3);
+		double R12 = inputR1 + inputR2 + (inputR1 * inputR2 * 1.0 / inputR3);
+		double R23 = inputR2 + inputR3 + (inputR2 * inputR3 * 1.0 / inputR1);
+		double R31 = inputR3 + inputR1 + (inputR3 * inputR1 * 1.0 / inputR2);
 
 		R1 = System::Convert::ToString("R12=" + R12 + " ohm");
 		R2 = System::Convert::ToString("R23=" + R23 + " ohm");
